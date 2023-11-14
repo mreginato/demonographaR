@@ -28,16 +28,15 @@ cleanDescriptions <- function(descriptions) {
     gsub("<d7>", "x", t0, fixed=T) -> t0
     gsub("<D7>", "x", t0, fixed=T) -> t0
     gsub("|", "x", t0, fixed=T) -> t0
-    # added by Patricia from the regex script below
     gsub("<U+FB02>", "fl", t0, fixed = T) -> t0
     gsub("<U+FB01>", "fi", t0, fixed = T) -> t0
-    gsub("; ", ". ", t0, fixed = T) -> t0 # because there are some descriptions where the separator is ';' and not '.' and it fucks up the capture
+    gsub("; ", ". ", t0, fixed = T) -> t0 
     gsub("<U+F0B4>", "?", t0, fixed = T) -> t0
     gsub("<U+2153>", "1/3", t0, fixed = T) -> t0
     gsub("<U+2154>", "2/3", t0, fixed = T) -> t0
-    gsub("<U+25CF>", "", t0, fixed = T) -> t0 # bolinha
-    gsub("<U+25B2>", "", t0, fixed = T) -> t0 # triangulinho
-    gsub("<U+2126>", "omega-shape", t0, fixed = T) -> t0 # omega?? talvez botar "omega shape", sei la...
+    gsub("<U+25CF>", "", t0, fixed = T) -> t0 
+    gsub("<U+25B2>", "", t0, fixed = T) -> t0 
+    gsub("<U+2126>", "omega-shape", t0, fixed = T) -> t0 
     gsub("<U+E033>", "?", t0, fixed = T) -> t0
     gsub("<U+0097>", " ", t0, fixed = T) -> t0
     gsub(" c.", " ca", t0, fixed = T) -> t0
